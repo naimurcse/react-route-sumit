@@ -1,14 +1,33 @@
+import { Button } from '@material-ui/core';
 import React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import "./Navbar.css";
+
 
 const Navbar = () => {
+
+    const activeStyle={
+        color:"#fff",
+        border: "1px solid rgb(149, 19, 255)",
+        backgroundColor:"rgb(149, 19, 255)"
+    }
+
     return (
         <div>
-            <ul>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/services">Services</Link>
-            </ul>
+            <NavLink exact to="/" className="navbar-link" 
+            activeClassName="selected"> Home </NavLink>
+
+            <NavLink exact to="/about" className="navbar-link" 
+            activeClassName="selected">About</NavLink>
+
+            <NavLink exact to="/services" className="navbar-link"
+            activeClassName="selected"
+            activeStyle={activeStyle}>Services</NavLink>
+
+            <NavLink exact to="/shop" className="navbar-link"
+            activeClassName="selected"
+            activeStyle={activeStyle}>Shop</NavLink>
+
         </div>
     );
 };

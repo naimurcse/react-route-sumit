@@ -1,0 +1,14 @@
+.navbar-link {
+    text-decoration: none;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 20px 20px 0 0;
+    display: inline-block;
+}
+
+.selected {
+    color: #fff;
+    border: 1px solid rgb(149, 19, 255);
+    background-color: rgb(149, 19, 255);
+}
